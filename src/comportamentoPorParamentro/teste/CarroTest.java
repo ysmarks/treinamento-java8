@@ -8,10 +8,10 @@ import java.util.function.Predicate;
 
 import comportamentoPorParamentro.classe.Carro;
 import comportamentoPorParamentro.interfaces.CarroStrategy;
-import comportamentoPorParamentro.strategy.CarroCorRosaStrategy;
-import comportamentoPorParamentro.strategy.CarroDezAnosRecenteStrategy;
 
 public class CarroTest {
+
+//metodo estatico para filtrar por cor usando java 1.7
 private static List<Carro> filtraPorcor(List<Carro> carros, String cor) {
 	List<Carro> result = new ArrayList<>();
 	for (Carro carro : carros) {
@@ -40,6 +40,7 @@ public static List<Carro> filtrarCarros(List<Carro> carros, CarroStrategy carroS
 	}
 	return resultado;
 } 
+//usando metodo generico
 public static <T> List<T> filtrar(List<T> list, Predicate<T> predicate) {
 	List<T> result = new ArrayList<>();
 	for (T t : list) {
@@ -72,5 +73,6 @@ public static <T> List<T> filtrar(List<T> list, Predicate<T> predicate) {
 		 * System.out.println(filtraPorcor(carros, "rosa"));
 		 * System.out.println(filtrarCarroDezAnosFabricado(carros));
 		 */
+		System.out.println(Calendar.getInstance().get(Calendar.YEAR) + " " + Calendar.getInstance().get(Calendar.MONTH) + " " + Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
 	}
 }

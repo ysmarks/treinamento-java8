@@ -2,6 +2,8 @@ package completableFuture.teste;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 import completableFuture.classe.Loja;
 
@@ -35,7 +37,7 @@ public class LojaTest {
 			System.out.println(System.currentTimeMillis() - inicio + " ms");
 		} catch (InterruptedException | ExecutionException e) {
 			e.printStackTrace();
-		}
+		} 
 	}
 	
 	private static void executando() {

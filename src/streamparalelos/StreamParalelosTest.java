@@ -5,12 +5,14 @@ import java.util.stream.Stream;
 
 public class StreamParalelosTest {
 
+	
 	public static void main(String[] args) {
 		long num = 10_000_000_00;
 		somaFor(num);
-		/*
-		 * somaStream(num); somaStreamParalelo(num);
-		 */
+		
+		somaStream(num);
+		somaStreamParalelo(num);
+		 
 		somaRangeClosedStream(num);
 		somaRangeClosedStreamParalelo(num);
 	}

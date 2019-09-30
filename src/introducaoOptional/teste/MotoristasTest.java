@@ -24,7 +24,7 @@ public class MotoristasTest {
 		 * System.out.println(seguro.getCobertura()); } }
 		 */
 		Motoristas motoristas = new Motoristas();
-		String cobertura = motoristas.porNome("Romario")
+		String cobertura = motoristas.porNome("tigre")
 				.flatMap(Motorista::getCaminhao)
 				.flatMap(Caminhao::getSeguro)
 				.map(Seguro::getCobertura)
